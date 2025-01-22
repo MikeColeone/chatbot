@@ -8,6 +8,7 @@
 
 ### gpt接口相关
 - ChatGPT：[https://chat.openai.com/chat](https://chat.openai.com/chat)
+- ApiKeys：[https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys) - hsk-dproj-xoYwfzP3VmtmV5Q4wtuzEMgxEFcKDXeyoYycoMU14OFL6ztBoWJTmxccZN4wWsXKvYcBVHev-2PT3BlbkFJywlP6qcTXKhzHdKiafdaDq9c-lxSG5XIG3nOPMCM524pIfB4uMmCrTmhSpukZpnCg8k052tCwA
 - json2entity：[https://www.sojson.com/json2entity.html](https://www.sojson.com/json2entity.html) - 用于对象转换
 - 知识星球：[https://wx.zsxq.com/dweb2/index/group/28885518425541](https://wx.zsxq.com/dweb2/index/group/28885518425541)
 - 注意事项：如果你不能创建知识星球，那么可以加入小傅哥的知识星球。可以设计一个只要圈你提问的内容，拉取下来进行回答。
