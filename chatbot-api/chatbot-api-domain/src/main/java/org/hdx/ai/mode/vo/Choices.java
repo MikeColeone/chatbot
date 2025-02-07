@@ -5,13 +5,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/**
- * @author lixing
- * @version V1.0
- * @ClassName:选择
- * @Description:
- * @Date 2024/1/21 22:55
- */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

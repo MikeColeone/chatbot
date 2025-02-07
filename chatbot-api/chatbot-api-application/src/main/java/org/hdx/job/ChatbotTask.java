@@ -13,13 +13,6 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Random;
 
-/**
- * @author lixing
- * @version V1.0
- * @ClassName: 任务体
- * @Description:
- * @Date 2024/1/24 9:00
- */
 public class ChatbotTask implements Runnable {
 
     private Logger logger = LoggerFactory.getLogger(ChatbotTask.class);

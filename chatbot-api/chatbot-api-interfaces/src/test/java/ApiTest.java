@@ -15,13 +15,6 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-/**
- * @author lixing
- * @version V1.0
- * @ClassName:
- * @Description:
- * @Date 2024/1/21 22:51
- */
 public class ApiTest {
 
     @Test
@@ -62,7 +55,7 @@ public class ApiTest {
 
         String paramJson = "{\n" +
                 "  \"req_data\": {\n" +
-                "    \"text\": \"哈哈，写脚本推上去了\\n\",\n" +
+                "    \"text\": \"无敌\\n\",\n" +
                 "    \"mentioned_user_ids\": [],\n" +
                 "    \"silenced\": false\n" +
                 "  }\n" +
@@ -86,12 +79,11 @@ public class ApiTest {
     public void test_chatGPT() throws IOException {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
-        // HttpPost post = new HttpPost("https://api.openai.com/v1/chat/completions");
+         HttpPost post = new HttpPost("https://api.openai.com/v1/chat/completions");
         // HttpPost post = new HttpPost("https://ai.fakeopen.com/api/conversation");
-        HttpPost post = new HttpPost("https://api.openai-proxy.com/v1/chat/completions");
+//        HttpPost post = new HttpPost("https://api.openai-proxy.com/v1/chat/completions");
         post.addHeader("Content-Type", "application/json");
-        // post.addHeader("Authorization", "Bearer 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");
-        post.addHeader("Authorization", "Bearer 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");
+        post.addHeader("Authorization", "Bearer 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");
 
         String paramJson = "{\"model\": \"gpt-3.5-turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"写一个Java冒泡排序\"}]}";
 
@@ -111,12 +103,13 @@ public class ApiTest {
             String role = messageObj.getString("role");
             String content = messageObj.getString("content");
 
-            System.out.println(jsonStr);
+            System.out.println("jsonStr              "+jsonStr);
             System.out.println("==================================================");
             System.out.println("Role: " + role);
             System.out.println("Content: " + content);
 
         } else {
+            System.out.println("---------------------------------------------");
             System.out.println(response.getStatusLine().getStatusCode());
         }
 

@@ -17,13 +17,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
-/**
- * @author lixing
- * @version V1.0
- * @ClassName:
- * @Description:
- * @Date 2024/1/21 22:56
- */
 @Service
 public class OpenAI implements IOpenAI {
 

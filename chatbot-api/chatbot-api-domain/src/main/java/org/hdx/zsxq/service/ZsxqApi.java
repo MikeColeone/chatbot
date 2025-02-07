@@ -36,6 +36,7 @@ public class ZsxqApi implements IZsxqApi {
         if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
             String jsonStr = EntityUtils.toString(response.getEntity());
             logger.info("拉取提问数据:groupId：{} jsonStr：{}", groupId, jsonStr);
+            System.out.println("++++++++++++++++++++++++++++++++++");
             return JSON.parseObject(jsonStr, UnAnsweredQuestionsAggregates.class);
         } else {
             throw new RuntimeException("queryUnAnsweredQuestionsTopicId Err Code is " + response.getStatusLine().getStatusCode());
