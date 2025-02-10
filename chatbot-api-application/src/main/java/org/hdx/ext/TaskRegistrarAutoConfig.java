@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author lixing
+ * @author hedx
  * @version V1.0
  * @ClassName: 任务注册服务，支持多组任务配置
  * @Description:
@@ -71,7 +71,7 @@ public class TaskRegistrarAutoConfig implements EnvironmentAware, SchedulingConf
             boolean silenced = Boolean.parseBoolean(taskGroup.get("silenced").toString());
             logger.info("创建任务 groupName：{} groupId：{} cronExpression：{}", groupName, groupId, cronExpression);
             // 添加任务
-            taskRegistrar.addCronTask(new ChatbotTask(groupName, groupId, cookie, openAiKey, zsxqApi, openAI, silenced), cronExpression);
+            taskRegistrar.addCronTask(new ChatbotTask(groupName, groupId, cookie, openAiKey,silenced, zsxqApi, openAI), cronExpression);
         }
     }
 

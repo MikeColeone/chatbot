@@ -1,5 +1,7 @@
 package org.hdx.job;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.hdx.ai.IOpenAI;
 import org.hdx.zsxq.IZsxqApi;
 import org.hdx.zsxq.mode.aggregates.UnAnsweredQuestionsAggregates;
@@ -7,38 +9,49 @@ import org.hdx.zsxq.mode.vo.Topics;
 import com.alibaba.fastjson.JSON;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Random;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Component
 public class ChatbotTask implements Runnable {
 
-    private Logger logger = LoggerFactory.getLogger(ChatbotTask.class);
+    private final Logger logger = LoggerFactory.getLogger(ChatbotTask.class);
 
     private String groupName;
+    @Value("${chatbot-api.group01.groupId}")
     private String groupId;
+
+    @Value("${chatbot-api.group01.cookie}")
     private String cookie;
+
+    @Resource
     private String openAiKey;
+
+    @Resource
     private boolean silenced;
 
+    @Resource
     private IZsxqApi zsxqApi;
+
+    @Resource
     private IOpenAI openAI;
 
-    public ChatbotTask(String groupName, String groupId, String cookie, String openAiKey, IZsxqApi zsxqApi, IOpenAI openAI, boolean silenced) {
-        this.groupName = groupName;
-        this.groupId = groupId;
-        this.cookie = cookie;
-        this.openAiKey = openAiKey;
-        this.zsxqApi = zsxqApi;
-        this.openAI = openAI;
-        this.silenced = silenced;
-    }
-
     @Override
+    @Scheduled(cron = "0 0/1 * * * ?")
     public void run() {
         try {
+
+            //特别规律的回答有风控风险
             if (new Random().nextBoolean()) {
                 logger.info("{} 随机打烊中...", groupName);
                 return;
