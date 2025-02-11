@@ -1,7 +1,7 @@
 # 基础镜像
 FROM openjdk:8-jre-slim
 # 作者
-MAINTAINER lixing
+MAINTAINER hedx
 # 配置
 ENV PARAMS=""
 # 时区
