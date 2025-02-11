@@ -11,7 +11,7 @@ zsxq_access_token=3BAAF6BC-6739-D355-4ADA-D12CBFCAB5DD_88C8C9B07BCB99FD; zsxqses
 - ApiKeys：[https://beta.openai.com/account/api-keys](https://beta.openai.com/account/api-keys) - hsk-dproj-xoYwfzP3VmtmV5Q4wtuzEMgxEFcKDXeyoYycoMU14OFL6ztBoWJTmxccZN4wWsXKvYcBVHev-2PT3BlbkFJywlP6qcTXKhzHdKiafdaDq9c-lxSG5XIG3nOPMCM524pIfB4uMmCrTmhSpukZpnCg8k052tCwA
 - json2entity：[https://www.sojson.com/json2entity.html](https://www.sojson.com/json2entity.html) - 用于对象转换
 - 知识星球：[https://wx.zsxq.com/dweb2/index/group/28885518425541](https://wx.zsxq.com/dweb2/index/group/28885518425541)
-- cookie获取: F12获取 cookie 信息。
+- cookie获取: F12打开调试面板
 
 
 ## 部署
